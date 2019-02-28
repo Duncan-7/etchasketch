@@ -23,7 +23,7 @@ function createGrid(sides){
 function singleBox(X){
     const newBox = document.createElement('div');
     newBox.classList.add('box');
-    let dimensions = 600/X - 2;
+    let dimensions = Math.floor(600/X - 2);
     newBox.style.height = dimensions + 'px';
     newBox.style.width = dimensions + 'px';
     newBox.addEventListener('mouseenter', () => newBox.style.backgroundColor = setColor());

@@ -1,12 +1,8 @@
 .container {
-    height: 602px;
-    width: 602px;
+    height: 600px;
+    width: 600px;
     
     margin: auto;   
-}
-
-.grid {
-    border: 1px black solid;
 }
 
 .box {
