@@ -11,9 +11,13 @@ let boxes = 16;
 createGrid(boxes);
 
 function createGrid(sides){
-    for(i = 0; i < sides*sides; i++){
-    singleBox(sides);
-    }
+    if(sides > 100){
+        resetGrid()
+    } else {
+        for(i = 0; i < sides*sides; i++){
+        singleBox(sides);
+        }
+    }    
 }
 
 function singleBox(X){
@@ -27,7 +31,7 @@ function singleBox(X){
 }
 
 function resetGrid(){
-    let newSize = prompt("How many squares wide do you want your grid to be?");
+    let newSize = prompt("How many squares wide do you want your grid to be? (max 100)");
     while (grid.hasChildNodes()) {
         grid.removeChild(grid.lastChild);
     }
