@@ -1,0 +1,15 @@
+.container {
+    height: 602px;
+    width: 602px;
+    
+    margin: auto;   
+}
+
+.grid {
+    border: 1px black solid;
+}
+
+.box {
+    border: 1px black solid;
+    float: left;
+}
