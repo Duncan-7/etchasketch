@@ -10,20 +10,21 @@ options.addEventListener('change', setColor);
 let boxes = 16;
 createGrid(boxes);
 
-function createGrid(sides){
-    if(sides > 100){
+function createGrid(num){
+    if(num > 100){
         resetGrid()
     } else {
+        sides = Math.floor(num)
         for(i = 0; i < sides*sides; i++){
         singleBox(sides);
         }
     }    
 }
 
-function singleBox(X){
+function singleBox(sideLength){
     const newBox = document.createElement('div');
     newBox.classList.add('box');
-    let dimensions = 600/X - 2;
+    let dimensions = 600/sideLength - 2;
     newBox.style.height = dimensions + 'px';
     newBox.style.width = dimensions + 'px';
     newBox.addEventListener('mouseenter', () => newBox.style.backgroundColor = setColor());
