@@ -11,7 +11,7 @@ let boxes = 16;
 createGrid(boxes);
 
 function createGrid(num){
-    if(num > 100){
+    if(num > 100 || num < 1 || isNaN(num)){
         resetGrid()
     } else {
         sides = Math.floor(num)
